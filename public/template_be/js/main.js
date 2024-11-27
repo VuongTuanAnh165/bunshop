@@ -41,6 +41,7 @@
     if ($('div').hasClass('section-menu-left')) {
       var bt =$(".section-menu-left").find(".has-children");
       bt.on("click", function () {
+        console.log($(this))
         var args = { duration: 200 };
         if ($(this).hasClass("active")) {
           $(this).children(".sub-menu").slideUp(args);
