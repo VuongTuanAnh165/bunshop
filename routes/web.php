@@ -3,12 +3,13 @@
 use App\Http\Controllers\Be\BeCategoryController;
 use App\Http\Controllers\Be\BeHomeController;
 use App\Http\Controllers\Be\BeUserController;
+use App\Http\Controllers\CommonController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::delete('ajax/destroy', [CommonController::class, 'destroy'])->name('ajax.destroy');
 Route::prefix('admin')->group(function () {
     Route::get('/login', [BeUserController::class, 'login'])->name('admin.login');
     Route::post('/login', [BeUserController::class, 'authenticate'])->name('admin.post.login');

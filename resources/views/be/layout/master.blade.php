@@ -23,6 +23,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('template_be/css/bootstrap-select.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('template_be/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('toastr/toastr.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/sweetalert2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/destroy.css?v=') . strtotime('now') }}">
+
     @yield('addcss')
 
     <!-- Font -->
@@ -112,6 +115,9 @@
     <script src="{{ asset('template_be/js/theme-settings.js') }}"></script>
     <script src="{{ asset('template_be/js/main.js') }}"></script>
     <script src="{{ asset('toastr/toastr.min.js') }}"></script>
+    <script src="{{ asset('js/sweetalert2.min.js') }}"></script>
+    <script src="{{ asset('js/destroy.js?v=') . strtotime('now') }}"></script>
+    @yield('addjs')
     @if (session('success') || session('error'))
         @include('common.script.toastr')
     @endif

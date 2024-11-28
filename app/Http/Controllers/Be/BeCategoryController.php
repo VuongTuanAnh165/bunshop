@@ -17,7 +17,7 @@ class BeCategoryController extends Controller
 {
     public function index()
     {
-        $data = Category::all();
+        $data = Category::paginate(10);
         return view('be.category.index', compact('data'));
     }
 
@@ -73,11 +73,15 @@ class BeCategoryController extends Controller
             ]);
             $params['slug'] = Str::slug($params['name']);
             if ($request->hasFile('image')) {
-                Storage::delete($data->image);
+                if(isset($data->image) && !empty($data->image)) {
+                    Storage::delete($data->image);
+                }
                 $params['image'] = Upload::handleUploadFile('image/category/','image', $request);
             }
             if ($request->hasFile('icon')) {
-                Storage::delete($data->image);
+                if(isset($data->icon) && !empty($data->icon)) {
+                    Storage::delete($data->icon);
+                }
                 $params['icon'] = Upload::handleUploadFile('image/category/','icon', $request);
             }
             $params['update_by'] = Auth::guard('admin')->user()->id;

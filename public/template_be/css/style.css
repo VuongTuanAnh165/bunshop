@@ -1577,11 +1577,11 @@ a:hover, a:focus {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.wg-pagination li:hover a, .wg-pagination li.active a {
+.wg-pagination li:not(.disabled):hover a, .wg-pagination li.active a {
   background: var(--Main);
   color: #fff !important;
 }
-.wg-pagination li:hover i, .wg-pagination li.active i {
+.wg-pagination li:not(.disabled):hover i, .wg-pagination li.active i {
   color: #fff !important;
 }
 .wg-pagination li:last-child a, .wg-pagination li:first-child a {
@@ -1789,6 +1789,7 @@ a:hover, a:focus {
   justify-content: center;
   gap: 10px;
   flex-direction: column;
+  z-index: 2;
 }
 .upload-image .uploadfile .icon {
   font-size: 40px;
@@ -1804,6 +1805,9 @@ a:hover, a:focus {
   position: absolute;
   opacity: 0;
   visibility: hidden;
+}
+.upload-image .uploadfile .body-text {
+    text-shadow: 1px 1px #000000;
 }
 .upload-image.style-1 {
   flex-wrap: wrap;
@@ -4670,7 +4674,7 @@ select.h40 {
   background: var(--bg-table);
 }
 .wg-table.table-all-category > * {
-  min-width: 1515px;
+  /* min-width: 1515px; */
 }
 .wg-table.table-all-category ul.table-title {
   padding: 12px;
@@ -6302,6 +6306,23 @@ select.h40 {
   .upload-image .item {
     width: 100%;
   }
+}
+
+.path-custom {
+    opacity: 0.4;
+    position: absolute;
+    z-index: 1;
+}
+
+.icon-custom img {
+    width: 50px !important;
+    height: 50px !important;
+    object-fit: cover;
+}
+
+.wg-pagination .disable {
+    pointer-events: none;
+    opacity: 0.4;
 }
 
 /*# sourceMappingURL=style.css.map */
