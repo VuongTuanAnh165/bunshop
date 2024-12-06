@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Be\BeCategoryController;
 use App\Http\Controllers\Be\BeHomeController;
+use App\Http\Controllers\Be\BeProductController;
 use App\Http\Controllers\Be\BeUserController;
 use App\Http\Controllers\CommonController;
 use Illuminate\Support\Facades\Route;
@@ -22,6 +23,13 @@ Route::prefix('admin')->group(function () {
             Route::post('/store', [BeCategoryController::class, 'store'])->name('admin.category.store');
             Route::get('/edit/{id}', [BeCategoryController::class, 'edit'])->name('admin.category.edit');
             Route::post('/update/{id}', [BeCategoryController::class, 'update'])->name('admin.category.update');
+        });
+        Route::prefix('/product')->group(function () {
+            Route::get('/', [BeProductController::class, 'index'])->name('admin.product.index');
+            Route::get('/create', [BeProductController::class, 'create'])->name('admin.product.create');
+            Route::post('/store', [BeProductController::class, 'store'])->name('admin.product.store');
+            Route::get('/edit/{id}', [BeProductController::class, 'edit'])->name('admin.product.edit');
+            Route::post('/update/{id}', [BeProductController::class, 'update'])->name('admin.product.update');
         });
     });
 });

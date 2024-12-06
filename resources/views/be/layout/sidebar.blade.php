@@ -14,6 +14,7 @@
             <ul class="menu-list">
                 @include('be.home.nav')
                 @include('be.category.nav')
+                @include('be.product.nav')
             </ul>
         </div>
     </div>

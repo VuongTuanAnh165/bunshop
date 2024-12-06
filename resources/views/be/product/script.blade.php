@@ -20,7 +20,7 @@
         }
         $('.deleteDialog').on('click', function() {
             let data_id = $(this).data('id');
-            let data_model = 'category';
+            let data_model = 'product';
             destroy(data_id, data_model, "{{ route('ajax.destroy') }}");
         });
     })

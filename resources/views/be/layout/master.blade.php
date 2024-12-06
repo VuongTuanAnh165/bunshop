@@ -97,6 +97,8 @@
     <script src="{{ asset('template_be/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('template_be/js/bootstrap-select.min.js') }}"></script>
     <script src="{{ asset('template_be/js/zoom.js') }}"></script>
+    <script src="{{ asset('template_be/js/tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ asset('template_be/js/tinymce/tinymce-custom.js') }}"></script>
     <script src="{{ asset('template_be/js/jvectormap-1.2.2.min.js') }}"></script>
     <script src="{{ asset('template_be/js/jvectormap-us-lcc.js') }}"></script>
     <script src="{{ asset('template_be/js/jvectormap.js') }}"></script>
@@ -117,6 +119,7 @@
     <script src="{{ asset('toastr/toastr.min.js') }}"></script>
     <script src="{{ asset('js/sweetalert2.min.js') }}"></script>
     <script src="{{ asset('js/destroy.js?v=') . strtotime('now') }}"></script>
+    @include('common.script.common')
     @yield('addjs')
     @if (session('success') || session('error'))
         @include('common.script.toastr')

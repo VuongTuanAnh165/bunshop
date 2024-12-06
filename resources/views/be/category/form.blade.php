@@ -4,6 +4,9 @@
         <div class="body-title">Tên danh mục <span class="tf-color-1">*</span></div>
         <input class="flex-grow" type="text" placeholder="Tên danh mục" name="name" tabindex="0"
             value="{{ old('name') ?? ($data->name ?? '') }}" aria-required="true" required>
+        @if ($errors->first('name'))
+            <div class="error error-be">{{ $errors->first('name') }}</div>
+        @endif
     </fieldset>
     <fieldset>
         <div class="body-title">Tải lên hình ảnh <span class="tf-color-1">*</span></div>
@@ -17,7 +20,8 @@
                             duyệt</span></span>
                     <input type="file" id="image" name="image">
                 </label>
-                <img id="pathImage" src="{{ $data?->image ? asset('storage/' . $data->image) : '' }}" class="absolute path-custom" onerror="this.onerror=null;">
+                <img id="pathImage" src="{{ $data?->image ? asset('storage/' . $data->image) : '' }}"
+                    class="absolute path-custom" onerror="this.onerror=null;">
             </div>
         </div>
     </fieldset>
@@ -33,7 +37,8 @@
                             duyệt</span></span>
                     <input type="file" id="icon" name="icon">
                 </label>
-                <img id="pathIcon" src="{{ $data?->icon ? asset('storage/' . $data->icon) : '' }}" class="absolute path-custom" onerror="this.onerror=null;">
+                <img id="pathIcon" src="{{ $data?->icon ? asset('storage/' . $data->icon) : '' }}"
+                    class="absolute path-custom" onerror="this.onerror=null;">
             </div>
         </div>
     </fieldset>
