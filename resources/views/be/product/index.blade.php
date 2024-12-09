@@ -52,16 +52,16 @@
             <a class="tf-button style-1 w208" href="{{ route('admin.product.create') }}"><i class="icon-plus"></i>Thêm
                 mới</a>
         </div>
-        {{-- <div class="wg-table table-all-category">
+        <div class="wg-table table-all-category">
             <ul class="table-title flex gap20 mb-14">
                 <li>
                     <div class="body-title">Tên sản phẩm</div>
                 </li>
                 <li>
-                    <div class="body-title">Icon</div>
+                    <div class="body-title">Danh mục</div>
                 </li>
                 <li>
-                    <div class="body-title">Thời gian cập nhật</div>
+                    <div class="body-title">Giá</div>
                 </li>
                 <li>
                     <div class="body-title">Hành động</div>
@@ -71,25 +71,29 @@
                 @foreach ($data as $item)
                     <li class="product-item gap14">
                         <div class="image no-bg">
-                            <img src="{{ !empty($item->image) ? asset('storage/' . $item->image) : '' }}" alt="">
+                            <img src="{{ !empty($item->samples[0]->image) ? asset('storage/' . $item->samples[0]->image) : '' }}"
+                                alt="">
                         </div>
                         <div class="flex items-center justify-between gap20 flex-grow">
                             <div class="name">
-                                <a href="product-list.html" class="body-title-2">{{ $item->name }}</a>
+                                <a href="{{ route('admin.product.edit', ['id' => $item->id]) }}" class="body-title-2">
+                                    {{ $item->name }}
+                                </a>
                             </div>
-                            <div class="icon-custom">
-                                @if (!empty($item->icon))
-                                    <img src="{{ asset('storage/' . $item->icon) }}" alt="icon">
-                                @endif
+                            <div class="name d-flex items-center">
+                                <a href="{{ route('admin.category.edit', ['id' => $item->category->id]) }}"
+                                    class="body-title-2">
+                                    {{ $item->category->name }}
+                                </a>
                             </div>
-                            <div class="body-text">{{ $item->updated_at ?? $item->created_at }}</div>
+                            <div class="body-text">{{ number_format($item->samples[0]->price) }} đ</div>
                             <div class="list-icon-function">
-                                <a href="{{ route('admin.category.edit', ['id' => $item->id]) }}">
+                                <a href="{{ route('admin.product.edit', ['id' => $item->id]) }}">
                                     <div class="item edit">
                                         <i class="icon-edit-3"></i>
                                     </div>
                                 </a>
-                                <a class="deleteDialog" href="javascript:void(0);" data-id="{{$item->id}}">
+                                <a class="deleteDialog" href="javascript:void(0);" data-id="{{ $item->id }}">
                                     <div class="item trash">
                                         <i class="icon-trash-2"></i>
                                     </div>
@@ -99,7 +103,7 @@
                     </li>
                 @endforeach
             </ul>
-        </div> --}}
+        </div>
         <div class="divider"></div>
         <div class="flex items-center justify-between flex-wrap gap10">
             <div class="text-tiny">Hiển thị 10 danh mục</div>

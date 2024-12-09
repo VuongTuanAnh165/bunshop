@@ -75,7 +75,9 @@
                         </div>
                         <div class="flex items-center justify-between gap20 flex-grow">
                             <div class="name">
-                                <a href="product-list.html" class="body-title-2">{{ $item->name }}</a>
+                                <a href="{{ route('admin.category.edit', ['id' => $item->id]) }}" class="body-title-2">
+                                    {{ $item->name }}
+                                </a>
                             </div>
                             <div class="icon-custom">
                                 @if (!empty($item->icon))
@@ -89,7 +91,7 @@
                                         <i class="icon-edit-3"></i>
                                     </div>
                                 </a>
-                                <a class="deleteDialog" href="javascript:void(0);" data-id="{{$item->id}}">
+                                <a class="deleteDialog" href="javascript:void(0);" data-id="{{ $item->id }}">
                                     <div class="item trash">
                                         <i class="icon-trash-2"></i>
                                     </div>

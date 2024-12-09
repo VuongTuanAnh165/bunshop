@@ -72,14 +72,15 @@ class Upload
      * @param $request
      * @return string
      */
-    public static function handleUploadFile($uploadPath, $name, $request)
+    public static function handleUploadFile($uploadPath, $name, $request = null, $file = null)
     {
-        $fullPath = '';
-        if (!$request->hasFile($name)) {
-            return $fullPath;
+        if (!empty($request)) {
+            $fullPath = '';
+            if (!$request->hasFile($name)) {
+                return $fullPath;
+            }
+            $file = $request->file($name);
         }
-
-        $file = $request->file($name);
         $saveName = $file->hashName();
         $fullPath = $uploadPath . $saveName;
         if (!Storage::disk('public')->exists($uploadPath)) {
