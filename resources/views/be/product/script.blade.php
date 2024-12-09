@@ -63,14 +63,44 @@
             }
         }
 
+        function setInputFile() {
+            const pathImage = $('.sample-image .path-image');
+            pathImage.each(function() {
+                if ($(this)) {
+                    const sampleImage = $(this).closest(".sample-image")
+                    const src = $(this).attr('src');
+                    console.log(src)
+                    if (src) {
+                        $.ajax({
+                            url: src,
+                            method: 'GET',
+                            xhrFields: {
+                                responseType: 'blob'
+                            },
+                            success: function(blob) {
+                                const fileName = src.split('/').pop();
+                                const file = new File([blob], fileName, {
+                                    type: blob.type
+                                });
+                                const dataTransfer = new DataTransfer();
+                                dataTransfer.items.add(file);
+                                sampleImage.find('input.image')[0].files = dataTransfer.files;
+                            },
+                            error: function() {
+                                console.error('Error fetching the file');
+                            }
+                        });
+                    }
+                }
+            })
+        }
+
         function setSampleDefault() {
-            console.log(SAMPLE)
             $(".sample").empty();
             let html = ``;
             if (SAMPLE) {
                 $.each(SAMPLE, function(id, item) {
                     let path = item.image ? "{{ asset('storage') }}/" + item.image : '';
-                    let type = item.image ? 'text' : 'file';
                     html += `
                         <div class="gap22 cols mb-16 sample-item">
                             <fieldset>
@@ -95,7 +125,7 @@
                                             </span>
                                             <span class="body-text">Thả ảnh của bạn ở đây hoặc chọn <span class="tf-color">nhấp để
                                                     duyệt</span></span>
-                                            <input value="${item.image}" type="${type}" class="image" name="image[]">
+                                            <input type="file" class="image" name="image[]">
                                         </label>
                                         <img src="${path}"
                                             class="absolute path-custom path-image" onerror="this.onerror=null;">
@@ -111,6 +141,7 @@
             $(".sample").html(html)
             getImage()
             setDisabled()
+            setInputFile()
         }
         setSampleDefault()
 

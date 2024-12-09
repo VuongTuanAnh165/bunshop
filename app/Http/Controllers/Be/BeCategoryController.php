@@ -54,7 +54,7 @@ class BeCategoryController extends Controller
     public function edit($id)
     {
         $data = Category::find($id);
-        if($data) {
+        if ($data) {
             return view('be.category.edit', compact('data'));
         }
         abort(404);
@@ -73,21 +73,21 @@ class BeCategoryController extends Controller
             ]);
             $params['slug'] = Str::slug($params['name']);
             if ($request->hasFile('image')) {
-                if(isset($data->image) && !empty($data->image)) {
+                if (isset($data->image) && !empty($data->image)) {
                     Storage::delete($data->image);
                 }
-                $params['image'] = Upload::handleUploadFile('image/category/','image', $request);
+                $params['image'] = Upload::handleUploadFile('image/category/', 'image', $request);
             }
             if ($request->hasFile('icon')) {
-                if(isset($data->icon) && !empty($data->icon)) {
+                if (isset($data->icon) && !empty($data->icon)) {
                     Storage::delete($data->icon);
                 }
-                $params['icon'] = Upload::handleUploadFile('image/category/','icon', $request);
+                $params['icon'] = Upload::handleUploadFile('image/category/', 'icon', $request);
             }
             $params['update_by'] = Auth::guard('admin')->user()->id;
             $data->update($params);
             DB::commit();
-            return redirect()->route('admin.category.index')->with(['success' => 'Chỉnh sửa thành công']);
+            return redirect()->route('admin.category.edit', ['id' => $id])->with(['success' => 'Chỉnh sửa thành công']);
         } catch (Exception $e) {
             Log::error('[BeCategoryController][update] error ' . $e->getMessage());
             DB::rollBack();

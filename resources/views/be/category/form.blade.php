@@ -18,7 +18,7 @@
                     </span>
                     <span class="body-text">Thả hình ảnh của bạn ở đây hoặc chọn <span class="tf-color">nhấp để
                             duyệt</span></span>
-                    <input type="file" value="{{ $data->image }}" id="image" name="image">
+                    <input type="file" id="image" name="image">
                 </label>
                 <img id="pathImage" src="{{ $data?->image ? asset('storage/' . $data->image) : '' }}"
                     class="absolute path-custom" onerror="this.onerror=null;">

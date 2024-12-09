@@ -112,7 +112,7 @@ class BeProductController extends Controller
     {
         $sample = Sample::where('product_id', $id)->get();
         foreach ($sample as $item) {
-            if(isset($item->image) && !empty($item->image) && !in_array($item->image, $path)) {
+            if (isset($item->image) && !empty($item->image) && !in_array($item->image, $path)) {
                 Storage::delete($item->image);
             }
             $item->delete();
