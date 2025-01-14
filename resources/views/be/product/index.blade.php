@@ -61,7 +61,10 @@
                     <div class="body-title">Danh mục</div>
                 </li>
                 <li>
-                    <div class="body-title">Giá</div>
+                    <div class="body-title">Giá gốc</div>
+                </li>
+                <li>
+                    <div class="body-title">Giảm giá</div>
                 </li>
                 <li>
                     <div class="body-title">Hành động</div>
@@ -87,6 +90,7 @@
                                 </a>
                             </div>
                             <div class="body-text">{{ number_format($item->samples[0]->price) }} đ</div>
+                            <div class="body-text">{{ $item->discount }} %</div>
                             <div class="list-icon-function">
                                 <a href="{{ route('admin.product.edit', ['id' => $item->id]) }}">
                                     <div class="item edit">

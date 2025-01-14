@@ -52,7 +52,7 @@ class Common
     public static function asideActive(array $arr_route = null): string
     {
         $arr_route = $arr_route ?? [];
-        return self::checkRouteActive($arr_route) ? 'active' : '';
+        return self::checkRouteActive($arr_route) ? 'active open' : '';
     }
 
     /**

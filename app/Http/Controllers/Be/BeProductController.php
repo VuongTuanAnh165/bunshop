@@ -36,7 +36,8 @@ class BeProductController extends Controller
             $params = $request->only([
                 'name',
                 'category_id',
-                'content'
+                'content',
+                'discount'
             ]);
             $params['slug'] = Str::slug($params['name']);
             $params['create_by'] = Auth::guard('admin')->user()->id;
@@ -74,7 +75,8 @@ class BeProductController extends Controller
             $params = $request->only([
                 'name',
                 'category_id',
-                'content'
+                'content',
+                'discount'
             ]);
             $params['slug'] = Str::slug($params['name']);
             $params['update_by'] = Auth::guard('admin')->user()->id;

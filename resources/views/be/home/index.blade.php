@@ -1,653 +1,825 @@
 @extends('be.layout.master')
 @section('title', 'Trang quản lý')
 @section('content')
-<div class="tf-section-2 mb-30">
-    <div class="flex gap20 flex-wrap-mobile">
-        <div class="w-half">
-            <!-- chart-default -->
-            <div class="wg-chart-default mb-20">
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center gap14">
-                        <div class="image">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="52" viewBox="0 0 48 52" fill="none">
-                                <path opacity="0.08" d="M19.1086 2.12943C22.2027 0.343099 26.0146 0.343099 29.1086 2.12943L42.4913 9.85592C45.5853 11.6423 47.4913 14.9435 47.4913 18.5162V33.9692C47.4913 37.5418 45.5853 40.8431 42.4913 42.6294L29.1086 50.3559C26.0146 52.1423 22.2027 52.1423 19.1086 50.3559L5.72596 42.6294C2.63194 40.8431 0.725956 37.5418 0.725956 33.9692V18.5162C0.725956 14.9435 2.63195 11.6423 5.72596 9.85592L19.1086 2.12943Z" fill="url(#paint0_linear_53_110)"/>
-                                <defs>
-                                  <linearGradient id="paint0_linear_53_110" x1="-43.532" y1="-34.3465" x2="37.6769" y2="43.9447" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#92BCFF"/>
-                                    <stop offset="1" stop-color="#2377FC"/>
-                                  </linearGradient>
-                                </defs>
-                            </svg>
-                            <i class="icon-shopping-bag"></i>
-                        </div>
-                        <div>
-                            <div class="body-text mb-2">Total Sales</div>
-                            <h4>34,945</h4>
+
+<!-- Page Header -->
+<div class="d-md-flex d-block align-items-center justify-content-between my-4 page-header-breadcrumb">
+    <h1 class="page-title fw-semibold fs-18 mb-0">Trang chủ</h1>
+</div>
+<!-- Page Header Close -->
+
+<!-- Start::row-1 -->
+<div class="row">
+    <div class="col-xl-3 col-sm-6">
+        <div class="card mg-b-20">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div>
+                        <p class=" mb-0">Total Purchase</p>
+                        <h3 class="mb-1">$5,383</h3>
+                    </div>
+                    <div class="ms-auto text-end">
+                        <div class="avatar avatar-lg bg-secondary-transparent avatar-rounded">
+                            <i class="fe fe-shopping-bag"></i>
                         </div>
                     </div>
-                    <div class="box-icon-trending up">
-                        <i class="icon-trending-up"></i>
-                        <div class="body-title number">1.56%</div>
-                    </div>
                 </div>
-                <div class="wrap-chart">
-                    <div id="line-chart-1"></div>
-                </div>
+                <small class="mb-0 text-muted"><i class="ti ti-arrow-narrow-down text-danger fw-bold "></i>20% <span
+                        class="ms-2">This Month</span>
+                    <span class="float-end text-muted"><i class="ti ti-arrow-narrow-up text-success fw-bold"></i>22%
+                        <span class="ms-2">Last Month</span></span>
+                </small>
             </div>
-            <!-- /chart-default -->
-            <!-- chart-default -->
-            <div class="wg-chart-default mb-20">
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center gap14">
-                        <div class="image">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="52" viewBox="0 0 48 52" fill="none">
-                                <path opacity="0.08" d="M19.1086 2.12943C22.2027 0.343099 26.0146 0.343099 29.1086 2.12943L42.4913 9.85592C45.5853 11.6423 47.4913 14.9435 47.4913 18.5162V33.9692C47.4913 37.5418 45.5853 40.8431 42.4913 42.6294L29.1086 50.3559C26.0146 52.1423 22.2027 52.1423 19.1086 50.3559L5.72596 42.6294C2.63194 40.8431 0.725956 37.5418 0.725956 33.9692V18.5162C0.725956 14.9435 2.63195 11.6423 5.72596 9.85592L19.1086 2.12943Z" fill="url(#paint0_linear_53_110)"/>
-                                <defs>
-                                  <linearGradient id="paint0_linear_53_110" x1="-43.532" y1="-34.3465" x2="37.6769" y2="43.9447" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#92BCFF"/>
-                                    <stop offset="1" stop-color="#2377FC"/>
-                                  </linearGradient>
-                                </defs>
-                            </svg>
-                            <i class="icon-dollar-sign"></i>
-                        </div>
-                        <div>
-                            <div class="body-text mb-2">Total Income</div>
-                            <h4>$37,802</h4>
-                        </div>
-                    </div>
-                    <div class="box-icon-trending down">
-                        <i class="icon-trending-down"></i>
-                        <div class="body-title number">1.56%</div>
-                    </div>
-                </div>
-                <div class="wrap-chart">
-                    <div id="line-chart-2"></div>
-                </div>
-            </div>
-            <!-- /chart-default -->
-            <!-- chart-default -->
-            <div class="wg-chart-default mb-20">
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center gap14">
-                        <div class="image">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="52" viewBox="0 0 48 52" fill="none">
-                                <path opacity="0.08" d="M19.1086 2.12943C22.2027 0.343099 26.0146 0.343099 29.1086 2.12943L42.4913 9.85592C45.5853 11.6423 47.4913 14.9435 47.4913 18.5162V33.9692C47.4913 37.5418 45.5853 40.8431 42.4913 42.6294L29.1086 50.3559C26.0146 52.1423 22.2027 52.1423 19.1086 50.3559L5.72596 42.6294C2.63194 40.8431 0.725956 37.5418 0.725956 33.9692V18.5162C0.725956 14.9435 2.63195 11.6423 5.72596 9.85592L19.1086 2.12943Z" fill="url(#paint0_linear_53_110)"/>
-                                <defs>
-                                  <linearGradient id="paint0_linear_53_110" x1="-43.532" y1="-34.3465" x2="37.6769" y2="43.9447" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#92BCFF"/>
-                                    <stop offset="1" stop-color="#2377FC"/>
-                                  </linearGradient>
-                                </defs>
-                            </svg>
-                            <i class="icon-file"></i>
-                        </div>
-                        <div>
-                            <div class="body-text mb-2">Orders Paid</div>
-                            <h4>34,945</h4>
-                        </div>
-                    </div>
-                    <div class="box-icon-trending">
-                        <i class="icon-trending-up"></i>
-                        <div class="body-title number">0.00%</div>
-                    </div>
-                </div>
-                <div class="wrap-chart">
-                    <div id="line-chart-3"></div>
-                </div>
-            </div>
-            <!-- /chart-default -->
-            <!-- chart-default -->
-            <div class="wg-chart-default">
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center gap14">
-                        <div class="image">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="52" viewBox="0 0 48 52" fill="none">
-                                <path opacity="0.08" d="M19.1086 2.12943C22.2027 0.343099 26.0146 0.343099 29.1086 2.12943L42.4913 9.85592C45.5853 11.6423 47.4913 14.9435 47.4913 18.5162V33.9692C47.4913 37.5418 45.5853 40.8431 42.4913 42.6294L29.1086 50.3559C26.0146 52.1423 22.2027 52.1423 19.1086 50.3559L5.72596 42.6294C2.63194 40.8431 0.725956 37.5418 0.725956 33.9692V18.5162C0.725956 14.9435 2.63195 11.6423 5.72596 9.85592L19.1086 2.12943Z" fill="url(#paint0_linear_53_110)"/>
-                                <defs>
-                                  <linearGradient id="paint0_linear_53_110" x1="-43.532" y1="-34.3465" x2="37.6769" y2="43.9447" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#92BCFF"/>
-                                    <stop offset="1" stop-color="#2377FC"/>
-                                  </linearGradient>
-                                </defs>
-                            </svg>
-                            <i class="icon-users"></i>
-                        </div>
-                        <div>
-                            <div class="body-text mb-2">Total Visitor</div>
-                            <h4>34,945</h4>
-                        </div>
-                    </div>
-                    <div class="box-icon-trending up">
-                        <i class="icon-trending-up"></i>
-                        <div class="body-title number">1.56%</div>
-                    </div>
-                </div>
-                <div class="wrap-chart">
-                    <div id="line-chart-4"></div>
-                </div>
-            </div>
-            <!-- /chart-default -->
         </div>
-        <!-- category -->
-        <div class="wg-box w-half">
-            <div class="flex items-center justify-between">
-                <h5>Sale by category</h5>
-                <div class="dropdown default">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                       <span class="icon-more"><i class="icon-more-horizontal"></i></span>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li>  
-                            <a href="javascript:void(0);">This Week</a>
+    </div>
+    <div class="col-xl-3 col-sm-6">
+        <div class="card mg-b-20">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div>
+                        <p class=" mb-0">Total Orders</p>
+                        <h3 class="mb-1">65,356</h3>
+                    </div>
+                    <div class="ms-auto text-end">
+                        <div class="avatar avatar-lg bg-info-transparent avatar-rounded">
+                            <i class="fe fe-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>
+                <small class="mb-0 text-muted"><i class="ti ti-arrow-narrow-down text-danger fw-bold "></i>26% <span
+                        class="ms-2">This Month</span>
+                    <span class="float-end text-muted"><i class="ti ti-arrow-narrow-up text-success fw-bold"></i>29%
+                        <span class="ms-2">Last Month</span></span>
+                </small>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-sm-6">
+        <div class="card mg-b-20">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div>
+                        <p class=" mb-0">Total Profit</p>
+                        <h3 class="mb-1">77,356</h3>
+                    </div>
+                    <div class="ms-auto text-end">
+                        <div class="avatar avatar-lg bg-success-transparent avatar-rounded">
+                            <i class="fe fe-dollar-sign"></i>
+                        </div>
+                    </div>
+                </div>
+                <small class="mb-0 text-muted"><i class="ti ti-arrow-narrow-down text-danger fw-bold "></i>16% <span
+                        class="ms-2">This Month</span>
+                    <span class="float-end text-muted"><i class="ti ti-arrow-narrow-up text-success fw-bold"></i>15%
+                        <span class="ms-2">Last Month</span></span>
+                </small>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-sm-6">
+        <div class="card mg-b-20">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div>
+                        <p class=" mb-0">Total Customers</p>
+                        <h3 class="mb-1">5,110</h3>
+                    </div>
+                    <div class="ms-auto text-end">
+                        <div class="avatar avatar-lg bg-danger-transparent avatar-rounded">
+                            <i class="fe fe-users"></i>
+                        </div>
+                    </div>
+                </div>
+                <small class="mb-0 text-muted"><i class="ti ti-arrow-narrow-down text-danger fw-bold "></i>32% <span
+                        class="ms-2">This Month</span>
+                    <span class="float-end text-muted"><i class="ti ti-arrow-narrow-up text-success fw-bold"></i>19%
+                        <span class="ms-2">Last Month</span></span>
+                </small>
+            </div>
+        </div>
+    </div>
+    <div class="col-xxl-3  col-md-6 col-sm-12">
+        <div class="card custom-card">
+            <div class="card-header justify-content-between flex-wrap">
+                <div class="card-title">
+                    Latest Updates
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="analytics-timeline">
+                    <ul class="timeline-1 mb-0">
+                        <li class="mt-0">
+                            <i class="bx bx-wallet-alt analytics-icon bg-danger-transparent text-danger"></i>
+                            <span class="fw-semibold mb-4 fs-14 ">Total Sales</span>
+                            <a href="javascript:void(0);" class="float-end fs-12 text-muted">3 days ago</a>
+                            <p class="mb-0 text-muted fs-13">23,89k New Sales</p>
                         </li>
-                        <li>  
-                            <a href="javascript:void(0);">Last Week</a>
+                        <li class="mt-0">
+                            <i class="bx bx-cube-alt analytics-icon bg-warning-transparent text-warning"></i>
+                            <span class="fw-semibold mb-4 fs-14 ">Total Products</span>
+                            <a href="javascript:void(0);" class="float-end fs-12 text-muted">1 day ago</a>
+                            <p class="mb-0 text-muted fs-13">1.3k New Products</p>
+                        </li>
+                        <li class="mt-0">
+                            <i class="bx bx-money analytics-icon bg-pink-transparent text-pink"></i>
+                            <span class="fw-semibold mb-4 fs-14 ">Total Incom</span>
+                            <a href="javascript:void(0);" class="float-end fs-12 text-muted">2 week ago</a>
+                            <p class="mb-0 text-muted fs-13">983k New Incom</p>
+                        </li>
+                        <li class="mt-0">
+                            <i class="bx bx-money-withdraw analytics-icon bg-success-transparent text-success"></i>
+                            <span class="fw-semibold mb-4 fs-14 ">Total Revenue</span>
+                            <a href="javascript:void(0);" class="float-end fs-12 text-muted">5 days ago</a>
+                            <p class="mb-0 text-muted fs-13">187k New Revenue</p>
+                        </li>
+                        <li class="mt-0">
+                            <i class="bx bx-bullseye analytics-icon bg-primary-transparent text-primary"></i>
+                            <span class="fw-semibold mb-4 fs-14 ">Total Visits</span>
+                            <a href="javascript:void(0);" class="float-end fs-12 text-muted">1 hour ago</a>
+                            <p class="text-muted fs">15% increased</p>
+                        </li>
+                        <li class="my-0">
+                            <i class="bx bx-download analytics-icon bg-info-transparent text-info"></i>
+                            <span class="fw-semibold mb-4 fs-14 ">Total profit</span>
+                            <a href="javascript:void(0);" class="float-end fs-12 text-muted">1 week ago</a>
+                            <p class="mb-0 text-muted fs-13">13k New profit</p>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="flex gap10 justify-between flex-wrap">
-                <div>
-                    <div class="text-tiny mb-2">Total Mar 20, 2023</div>
-                    <div class="flex items-center gap10">
-                        <h4>$37,802</h4>
-                        <div class="box-icon-trending up">
-                            <i class="icon-trending-up"></i>
-                            <div class="body-title number">0.56%</div>
-                        </div>
-                    </div>
+        </div>
+    </div>
+    <div class="col-xxl-6  col-md-6">
+        <div class="card custom-card">
+            <div class="card-header  justify-content-between">
+                <div class="card-title">Sales Statistics</div>
+                <div class="dropdown">
+                    <a href="javascript:void(0);" class="btn btn-outline-light btn-icons btn-sm text-muted"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fe fe-more-vertical"></i>
+                    </a>
+                    <ul class="dropdown-menu mb-0" role="menu">
+                        <li class="border-bottom"><a class="dropdown-item" href="javascript:void(0);">Today</a></li>
+                        <li class="border-bottom"><a class="dropdown-item" href="javascript:void(0);">This Week</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0);">Last Week</a></li>
+                    </ul>
                 </div>
-                <div class="dropdown default style-box">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <a href="product-list.html" class="view-all">Week<i class="icon-chevron-down"></i></a>
-                    </button>
+            </div>
+            <div class="card-body">
+                <div id="earnings"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xxl-3 col-md-6 ">
+        <div class="card custom-card">
+            <div class="card-header justify-content-between">
+                <div class="card-title">
+                    Top Countries By Sales
+                </div>
+                <div class="dropdown">
+                    <a href="javascript:void(0);" class="btn btn-outline-light btn-icons btn-sm text-muted"
+                        data-bs-toggle="dropdown">
+                        <i class="fe fe-more-vertical"></i>
+                    </a>
                     <ul class="dropdown-menu">
-                        <li>  
-                            <a href="javascript:void(0);">Month</a>
+                        <li class="border-bottom"><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                        <li class="border-bottom"><a class="dropdown-item" href="javascript:void(0);">Another action</a>
                         </li>
-                        <li>  
-                            <a href="javascript:void(0);">Year</a>
-                        </li>
+                        <li><a class="dropdown-item" href="javascript:void(0);">Something else here</a></li>
                     </ul>
                 </div>
             </div>
-            <div id="morris-donut-1" class="text-center"></div>
-            <div class="flex gap20">
-                <div class="block-legend style-1 w-full">
-                    <div class="dot t1"></div>
-                    <div class="text-tiny">Men Fashion</div>
-                </div>
-                <div class="block-legend style-1 w-full">
-                    <div class="dot t2"></div>
-                    <div class="text-tiny">Men Fashion</div>
-                </div>
-                <div class="block-legend style-1 w-full">
-                    <div class="dot t3"></div>
-                    <div class="text-tiny">Men Fashion</div>
-                </div>
-            </div>
-            <div class="flex gap20">
-                <div class="block-legend style-1 w-full">
-                    <div class="dot t4"></div>
-                    <div class="text-tiny">Accessory</div>
-                </div>
-                <div class="block-legend style-1 w-full">
-                    <div class="dot t5"></div>
-                    <div class="text-tiny">Sport shoes</div>
-                </div>
-                <div class="block-legend style-1 w-full">
-                    <div class="dot t6"></div>
-                    <div class="text-tiny">Underwear</div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table text-nowrap mb-0">
+                        <tbody class="top-selling">
+                            <tr>
+                                <td class="ps-4">
+                                    <div class="d-inline-flex mt-1">
+                                        <span class="avatar avatar-xs  text-default">
+                                            <img src="../assets/images/flags/us_flag.jpg" alt="">
+                                        </span>
+                                        <span class="ms-2 fs-14 fw-semibold mb-0">United States</span>
+                                    </div>
+                                </td>
+                                <td class="text-end">
+                                    <span class="fw-semibold fs-14">$15,091.00</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4">
+                                    <div class="d-inline-flex mt-1">
+                                        <span class="avatar avatar-xs  text-default">
+                                            <img src="../assets/images/flags/india_flag.jpg" alt="">
+                                        </span>
+                                        <span class="ms-2 fs-14 fw-semibold mb-0">India</span>
+                                    </div>
+                                </td>
+                                <td class="text-end">
+                                    <span class="fw-semibold fs-14">$14,091.00</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4">
+                                    <div class="d-inline-flex mt-1">
+                                        <span class="avatar avatar-xs  text-default">
+                                            <img src="../assets/images/flags/argentina_flag.jpg" alt="">
+                                        </span>
+                                        <span class="ms-2 fs-14 fw-semibold mb-0">Argentina</span>
+                                    </div>
+                                </td>
+                                <td class="text-end">
+                                    <span class="fw-semibold fs-14">$64,091.00</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4">
+                                    <div class="d-inline-flex mt-1">
+                                        <span class="avatar avatar-xs  text-default">
+                                            <img src="../assets/images/flags/canada_flag.jpg" alt="">
+                                        </span>
+                                        <span class="ms-2 fs-14 fw-semibold mb-0">Canada</span>
+                                    </div>
+                                </td>
+                                <td class="text-end">
+                                    <span class="fw-semibold fs-14">$23,981.00</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4">
+                                    <div class="d-inline-flex mt-1">
+                                        <span class="avatar avatar-xs  text-default">
+                                            <img src="../assets/images/flags/russia_flag.jpg" alt="">
+                                        </span>
+                                        <span class="ms-2 fs-14 fw-semibold mb-0">Russia</span>
+                                    </div>
+                                </td>
+                                <td class="text-end">
+                                    <span class="fw-semibold fs-14">$12,333.00</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4">
+                                    <div class="">
+                                        <div class="d-inline-flex mt-1">
+                                            <span class="avatar avatar-xs  text-default">
+                                                <img src="../assets/images/flags/spain_flag.jpg" alt="">
+                                            </span>
+                                            <span class="ms-2 fs-14 fw-semibold mb-0">Spain</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-end">
+                                    <span class="fw-semibold fs-14">$87,987.00</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4">
+                                    <div class="">
+                                        <div class="d-inline-flex mt-1">
+                                            <span class="avatar avatar-xs  text-default">
+                                                <img src="../assets/images/flags/mexico_flag.jpg" alt="">
+                                            </span>
+                                            <span class="ms-2 fs-14 fw-semibold mb-0">Mexico</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-end">
+                                    <span class="fw-semibold fs-14">$32,543.00</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-        <!-- /category -->
     </div>
-    <!-- earnings -->
-    <div class="wg-box">
-        <div class="flex items-center justify-between">
-            <h5>Earnings revenue</h5>
-            <div class="dropdown default">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   <span class="icon-more"><i class="icon-more-horizontal"></i></span>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li>  
-                        <a href="javascript:void(0);">This Week</a>
-                    </li>
-                    <li>  
-                        <a href="javascript:void(0);">Last Week</a>
-                    </li>
-                </ul>
+    <div class="col-xxl-5  col-md-6">
+        <div class="card custom-card">
+            <div class="card-header justify-content-between border-bottom-0">
+                <div class="card-title">
+                    Top Selling Products
+                </div>
+                <div class="dropdown">
+                    <a href="javascript:void(0);" class="btn btn-outline-light btn-icons btn-sm text-muted"
+                        data-bs-toggle="dropdown">
+                        <i class="fe fe-more-vertical"></i>
+                    </a>
+                    <ul class="dropdown-menu mb-0">
+                        <li class="border-bottom"><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                        <li class="border-bottom"><a class="dropdown-item" href="javascript:void(0);">Another action</a>
+                        </li>
+                        <li><a class="dropdown-item" href="javascript:void(0);">Something else here</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table text-nowrap table-hover border table-bordered">
+                        <thead class="border-top">
+                            <tr>
+                                <th class="border-bottom-0 ps-4">Product Name</th>
+                                <th class="border-bottom-0">stock</th>
+                                <th class="border-bottom-0">Price</th>
+                                <th class="border-bottom-0">Sold</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-bottom">
+                                <td class=" ps-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar avatar-sm me-2">
+                                            <img src="../assets/images/ecommerce/jpg/6.jpg" alt="avatar"
+                                                class="rounded-1">
+                                        </div>
+                                        <a href="product-details.html">Sports Shoes For Men</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mt-sm-1 d-block">
+                                        <span class="badge bg-success-transparent text-success">In Stock</span>
+                                    </div>
+                                </td>
+                                <td> $73.800</td>
+                                <td>1,534</td>
+                            </tr>
+                            <tr class="border-bottom">
+                                <td class=" ps-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar avatar-sm me-2">
+                                            <img src="../assets/images/ecommerce/jpg/1.jpg" alt="avatar"
+                                                class="rounded-1">
+                                        </div>
+                                        <a href="product-details.html">Mobile Phone</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mt-sm-1 d-block">
+                                        <span class="badge bg-success-transparent text-success">In Stock</span>
+                                    </div>
+                                </td>
+                                <td> $73.800</td>
+                                <td>1,534</td>
+                            </tr>
+                            <tr class="border-bottom">
+                                <td class=" ps-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar avatar-sm me-2">
+                                            <img src="../assets/images/ecommerce/jpg/5.jpg" alt="avatar"
+                                                class="rounded-1">
+                                        </div>
+                                        <a href="product-details.html">Beautiful flower Frame</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mt-sm-1 d-block">
+                                        <span class="badge bg-info-transparent text-info">Few-left</span>
+                                    </div>
+                                </td>
+                                <td> $73.800</td>
+                                <td>4,987</td>
+                            </tr>
+                            <tr class="border-bottom">
+                                <td class=" ps-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar avatar-sm me-2">
+                                            <img src="../assets/images/ecommerce/jpg/3.jpg" alt="avatar"
+                                                class="rounded-1">
+                                        </div>
+                                        <a href="product-details.html">Small Alaram Watch</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mt-sm-1 d-block">
+                                        <span class="badge bg-danger-transparent text-danger">Out Of Stock</span>
+                                    </div>
+                                </td>
+                                <td> $13.800</td>
+                                <td>87,875</td>
+                            </tr>
+                            <tr class="border-bottom">
+                                <td class=" ps-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar avatar-sm me-2">
+                                            <img src="../assets/images/ecommerce/jpg/4.jpg" alt="avatar"
+                                                class="rounded-1">
+                                        </div>
+                                        <a href="product-details.html">Black colord lens cemara</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mt-sm-1 d-block">
+                                        <span class="badge bg-success-transparent text-success">In Stock</span>
+                                    </div>
+                                </td>
+                                <td> $14.600</td>
+                                <td>98,876</td>
+                            </tr>
+                            <tr class="border-bottom">
+                                <td class=" ps-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar avatar-sm me-2">
+                                            <img src="../assets/images/ecommerce/jpg/2.jpg" alt="avatar"
+                                                class="rounded-1">
+                                        </div>
+                                        <a href="product-details.html"> Black colored Headset</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mt-sm-1 d-block">
+                                        <span class="badge bg-info-transparent text-info">Few-left</span>
+                                    </div>
+                                </td>
+                                <td> $23.800</td>
+                                <td>1,987</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-        <div class="flex flex-wrap gap40">
-            <div>
-                <div class="mb-2">
-                    <div class="block-legend">
-                        <div class="dot t1"></div>
-                        <div class="text-tiny">Revenue</div>
-                    </div>
-                </div>
-                <div class="flex items-center gap10">
-                    <h4>$37,802</h4>
-                    <div class="box-icon-trending up">
-                        <i class="icon-trending-up"></i>
-                        <div class="body-title number">0.56%</div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="mb-2">
-                    <div class="block-legend">
-                        <div class="dot t2"></div>
-                        <div class="text-tiny">Order</div>
-                    </div>
-                </div>
-                <div class="flex items-center gap10">
-                    <h4>$28,305</h4>
-                    <div class="box-icon-trending up">
-                        <i class="icon-trending-up"></i>
-                        <div class="body-title number">0.56%</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="line-chart-8"></div>
     </div>
-    <!-- /earnings -->
+    <div class="col-xxl-3 col-md-6 ">
+        <div class="card custom-card">
+            <div class="card-header justify-content-between">
+                <div class="card-title">
+                    Top Customers
+                </div>
+                <div class="dropdown">
+                    <a href="javascript:void(0);" class="btn btn-outline-light btn-icons btn-sm text-muted"
+                        data-bs-toggle="dropdown">
+                        <i class="fe fe-more-vertical"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="border-bottom"><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                        <li class="border-bottom"><a class="dropdown-item" href="javascript:void(0);">Another action</a>
+                        </li>
+                        <li><a class="dropdown-item" href="javascript:void(0);">Something else here</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table text-nowrap mb-0">
+                        <tbody class="top-selling">
+                            <tr>
+                                <td class="ps-4">
+                                    <div class="d-inline-flex align-items-center">
+                                        <span class="avatar  text-default">
+                                            <img src="../assets/images/faces/4.jpg" alt="">
+                                        </span>
+                                        <div class="ms-2">
+                                            <p class="mb-0 fs-14 fw-semibold mb-0">Alian Gorger</p>
+                                            <small class="fs-12 text-muted mb-0">United States</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-end">
+                                    <span class="fw-semibold fs-14">$15,091.00</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4">
+                                    <div class="d-inline-flex align-items-center">
+                                        <span class="avatar  text-default">
+                                            <img src="../assets/images/faces/3.jpg" alt="">
+                                        </span>
+                                        <div class="ms-2">
+                                            <p class="mb-0 fs-14 fw-semibold mb-0">Gorger Mullin</p>
+                                            <small class="fs-12 text-muted mb-0">United Kingdom</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-end">
+                                    <span class="fw-semibold fs-14">$76,091.00</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4">
+                                    <div class="d-inline-flex align-items-center">
+                                        <span class="avatar  text-default">
+                                            <img src="../assets/images/faces/7.jpg" alt="">
+                                        </span>
+                                        <div class="ms-2">
+                                            <p class="mb-0 fs-14 fw-semibold mb-0">Allien Werret</p>
+                                            <small class="fs-12 text-muted mb-0">France</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-end">
+                                    <span class="fw-semibold fs-14">$86,987.00</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4">
+                                    <div class="d-inline-flex align-items-center">
+                                        <span class="avatar  text-default">
+                                            <img src="../assets/images/faces/2.jpg" alt="">
+                                        </span>
+                                        <div class="ms-2">
+                                            <p class="mb-0 fs-14 fw-semibold mb-0"> Archee Worn</p>
+                                            <small class="fs-12 text-muted mb-0">Germany</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-end">
+                                    <span class="fw-semibold fs-14">$99,007.00</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4">
+                                    <div class="d-inline-flex align-items-center">
+                                        <span class="avatar  text-default">
+                                            <img src="../assets/images/faces/1.jpg" alt="">
+                                        </span>
+                                        <div class="ms-2">
+                                            <p class="mb-0 fs-14 fw-semibold mb-0"> Gemenny Alin</p>
+                                            <small class="fs-12 text-muted mb-0">Australia</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-end">
+                                    <span class="fw-semibold fs-14">$26,107.00</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xxl-4 col-md-6">
+        <div class="card custom-card">
+            <div class="card-header justify-content-between">
+                <div class="card-title">
+                    Total Sales By Categories
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="d-flex mb-3">
+                    <div class="me-2">
+                        <span class="avatar bg-info"><i class="ti ti-cash fs-18"></i></span>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="mb-0">73,390</h3>
+                        <span>Total Sales</span>
+                    </div>
+                </div>
+                <div class="progress-stacked mb-2">
+                    <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="45"
+                        aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                        <div class="progress-bar bg-primary"></div>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="Segment two" aria-valuenow="30"
+                        aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+                        <div class="progress-bar bg-secondary"></div>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+                        <div class="progress-bar bg-success"></div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <span class="d-flex align-items-center"><i
+                            class="ri-record-circle-fill text-primary fs-15 me-2"></i>Electronics</span>
+                    <span class="d-flex align-items-center mx-sm-3"><i
+                            class="ri-record-circle-fill text-secondary fs-15 me-2"></i>Fashion</span>
+                    <span class="d-flex align-items-center"><i
+                            class="ri-record-circle-fill text-success fs-15 me-2"></i>Others</span>
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card">
+            <div class="card-body">
+                <h6 class="mb-4">Total Expenses</h6>
+                <div class="d-flex flex-wrap align-items-center justify-content-between">
+                    <div>
+                        <p class="text-muted fs-12 mb-0">Monthly</p>
+                        <h3 class="fw-semibold">78,789.00</h3>
+                        <span class="d-block text-success fs-12">+0.892 <i class="ti ti-trending-up ms-1"></i></span>
+                    </div>
+                    <div id="analytics-visitors"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="tf-section mb-30">
-    <!-- orders -->
-    <div class="wg-box">
-        <div class="flex items-center justify-between">
-            <h5>Recent orders</h5>
-            <div class="dropdown default">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span class="view-all">View all<i class="icon-chevron-down"></i></span>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li>  
-                        <a href="javascript:void(0);">3 days</a>
-                    </li>
-                    <li>  
-                        <a href="javascript:void(0);">7 days</a>
-                    </li>
-                </ul>
+<!--End::row-1 -->
+
+<!--Start::Row-2-->
+<div class="row">
+    <div class="col-xl-12">
+        <div class="card custom-card">
+            <div class="card-header justify-content-between">
+                <div class="card-title">
+                    Oreder Summary
+                </div>
+                <div class="d-flex">
+                    <div class="me-3">
+                        <input class="form-control form-control-sm" type="text" placeholder="Search Here"
+                            aria-label=" example">
+                    </div>
+                    <div class="dropdown">
+                        <a href="javascript:void(0);" class="btn btn-sm btn-primary btn-wave waves-effect waves-light"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Sort By<i class="ri-arrow-down-s-line align-middle ms-1 d-inline-block"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a class="dropdown-item" href="javascript:void(0);">New</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Popular</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Relevant</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table text-nowrap table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">Product Name</th>
+                                <th scope="col">Transaction Id</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Payment method</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-2 lh-1">
+                                            <span class="avatar avatar-sm">
+                                                <img src="../assets/images/ecommerce/jpg/3.jpg" alt=""
+                                                    class="rounded-1">
+                                            </span>
+                                        </div>
+                                        <div class="fs-14">Small alaram watch</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="fw-semibold">#1902-9883</span>
+                                </td>
+                                <td>
+                                    $99.99
+                                </td>
+                                <td>
+                                    <span class="">02-03-2023</span>
+                                </td>
+                                <td>
+                                    <span class="">Cash On Delivery</span>
+                                </td>
+                                <td>
+                                    <span class="badge bg-danger-transparent">Canceld</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-2 lh-1">
+                                            <span class="avatar avatar-sm">
+                                                <img src="../assets/images/ecommerce/jpg/5.jpg" alt=""
+                                                    class="rounded-1">
+                                            </span>
+                                        </div>
+                                        <div class="fs-14">Beautiful flower Frame</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="fw-semibold">#1962-9033</span>
+                                </td>
+                                <td>
+                                    $199.99
+                                </td>
+                                <td>
+                                    <span class="">03-02-2023</span>
+                                </td>
+                                <td>
+                                    <span class="">Cash On Delivery</span>
+                                </td>
+                                <td>
+                                    <span class="badge bg-primary-transparent">Shipped</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-2 lh-1">
+                                            <span class="avatar avatar-sm">
+                                                <img src="../assets/images/ecommerce/jpg/4.jpg" alt=""
+                                                    class="rounded-1">
+                                            </span>
+                                        </div>
+                                        <div class="fs-14">Black colord lens cemara</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="fw-semibold">#8745-1232</span>
+                                </td>
+                                <td>
+                                    $79.00
+                                </td>
+                                <td>
+                                    <span class=""> 01-03-2023</span>
+                                </td>
+                                <td>
+                                    <span class="">Online</span>
+                                </td>
+                                <td>
+                                    <span class="badge bg-warning-transparent">Pending</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-2 lh-1">
+                                            <span class="avatar avatar-sm">
+                                                <img src="../assets/images/ecommerce/jpg/1.jpg" alt=""
+                                                    class="rounded-1">
+                                            </span>
+                                        </div>
+                                        <div class="fs-14">Black colord Smart mobile phone</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="fw-semibold">#1734-9743</span>
+                                </td>
+                                <td>
+                                    $199.99
+                                </td>
+                                <td>
+                                    <span class="">03-03-2023</span>
+                                </td>
+                                <td>
+                                    <span class="">Online</span>
+                                </td>
+                                <td>
+                                    <span class="badge bg-success-transparent">Delivered</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-2 lh-1">
+                                            <span class="avatar avatar-sm">
+                                                <img src="../assets/images/ecommerce/jpg/6.jpg" alt=""
+                                                    class="rounded-1">
+                                            </span>
+                                        </div>
+                                        <div class="fs-14">Sports Shoes for men</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="fw-semibold">#1802-9883</span>
+                                </td>
+                                <td>
+                                    $39.99
+                                </td>
+                                <td>
+                                    <span class="">02-03-2023</span>
+                                </td>
+                                <td>
+                                    <span class="">Cash On Delivery</span>
+                                </td>
+                                <td>
+                                    <span class="badge bg-danger-transparent">Canceld</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="d-flex align-items-center">
+                    <div>
+                        Showing 5 Entries <i class="bi bi-arrow-right ms-2 fw-semibold"></i>
+                    </div>
+                    <div class="ms-auto">
+                        <nav aria-label="Page navigation" class="pagination-style-4">
+                            <ul class="pagination mb-0">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="javascript:void(0);">
+                                        Prev
+                                    </a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
+                                <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                                <li class="page-item">
+                                    <a class="page-link text-primary" href="javascript:void(0);">
+                                        next
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="wg-table table-product-overview t2">
-            <ul class="table-title flex gap20 mb-14">
-                <li>
-                    <div class="body-title">Product</div>
-                </li>    
-                <li>
-                    <div class="body-title">Customer</div>
-                </li>
-                <li>
-                    <div class="body-title">Product ID</div>
-                </li>
-                <li>
-                    <div class="body-title">Quantity</div>
-                </li>
-                <li>
-                    <div class="body-title">Price</div>
-                </li>
-                <li>
-                    <div class="body-title">Status</div>
-                </li>
-            </ul>
-            <div class="divider mb-14"></div>
-            <ul class="flex flex-column gap10">
-                <li class="product-item gap14">
-                    <div class="image no-bg">
-                        <img src="{{ asset('template_be/images/products/31.png') }}" alt="">
-                    </div>
-                    <div class="flex items-center justify-between flex-grow gap20">
-                        <div class="name">
-                            <a href="product-list.html" class="body-title-2">Taste of the Wild Formula Finder</a>
-                        </div>
-                        <div class="body-text">2,672</div>
-                        <div class="body-text">$28,672.36</div>
-                        <div class="body-text">X1</div>
-                        <div class="body-text">$28,672.36</div>
-                        <div>
-                            <div class="block-available">Delivered</div>
-                        </div>
-                    </div>
-                </li>
-                <li class="divider"></li>
-                <li class="product-item gap14">
-                    <div class="image no-bg">
-                        <img src="{{ asset('template_be/images/products/32.png') }}" alt="">
-                    </div>
-                    <div class="flex items-center justify-between flex-grow gap20">
-                        <div class="name">
-                            <a href="product-list.html" class="body-title-2">Proden Plaqueoff Dental Bites Dog, 150 G</a>
-                        </div>
-                        <div class="body-text">2,672</div>
-                        <div class="body-text">$28,672.36</div>
-                        <div class="body-text">X2</div>
-                        <div class="body-text">$28,672.36</div>
-                        <div>
-                            <div class="block-available">Delivered</div>
-                        </div>
-                    </div>
-                </li>
-                <li class="divider"></li>
-                <li class="product-item gap14">
-                    <div class="image no-bg">
-                        <img src="{{ asset('template_be/images/products/33.png') }}" alt="">
-                    </div>
-                    <div class="flex items-center justify-between flex-grow gap20">
-                        <div class="name">
-                            <a href="product-list.html" class="body-title-2">Zuke's Lil' Links Healthy Little Sausage Links for Dogs...</a>
-                        </div>
-                        <div class="body-text">2,672</div>
-                        <div class="body-text">$28,672.36</div>
-                        <div class="body-text">X1</div>
-                        <div class="body-text">$28,672.36</div>
-                        <div>
-                            <div class="block-available">Delivered</div>
-                        </div>
-                    </div>
-                </li>
-                <li class="divider"></li>
-                <li class="product-item gap14">
-                    <div class="image no-bg">
-                        <img src="{{ asset('template_be/images/products/34.png') }}" alt="">
-                    </div>
-                    <div class="flex items-center justify-between flex-grow gap20">
-                        <div class="name">
-                            <a href="product-list.html" class="body-title-2">Rachael Ray Nutrish Grain Free Chicken Drumstick...</a>
-                        </div>
-                        <div class="body-text">2,672</div>
-                        <div class="body-text">$28,672.36</div>
-                        <div class="body-text">X3</div>
-                        <div class="body-text">$28,672.36</div>
-                        <div>
-                            <div class="block-available">Delivered</div>
-                        </div>
-                    </div>
-                </li>
-                <li class="divider"></li>
-                <li class="product-item gap14">
-                    <div class="image no-bg">
-                        <img src="{{ asset('template_be/images/products/35.png') }}" alt="">
-                    </div>
-                    <div class="flex items-center justify-between flex-grow gap20">
-                        <div class="name">
-                            <a href="product-list.html" class="body-title-2">Fruitables Dog Treats Sweet Potato & Pecan Flavor</a>
-                        </div>
-                        <div class="body-text">2,672</div>
-                        <div class="body-text">$28,672.36</div>
-                        <div class="body-text">X2</div>
-                        <div class="body-text">$28,672.36</div>
-                        <div>
-                            <div class="block-available">Delivered</div>
-                        </div>
-                    </div>
-                </li>
-                
-            </ul>
-        </div>
-        <div class="divider"></div>
-        <div class="flex items-center justify-between flex-wrap gap10">
-            <div class="text-tiny">Showing 5 entries</div>
-            <ul class="wg-pagination">
-                <li>
-                    <a href="#"><i class="icon-chevron-left"></i></a>
-                </li>
-                <li>
-                    <a href="#">1</a>
-                </li>
-                <li class="active">
-                    <a href="#">2</a>
-                </li>
-                <li>
-                    <a href="#">3</a>
-                </li>
-                <li>
-                    <a href="#"><i class="icon-chevron-right"></i></a>
-                </li>
-            </ul>
-        </div>
     </div>
-    <!-- /orders -->
 </div>
-<div class="tf-section-3">
-    <!-- top-product -->
-    <div class="wg-box">
-        <div class="flex items-center justify-between">
-            <h5>Top product</h5>
-            <div class="dropdown default">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   <span class="icon-more"><i class="icon-more-horizontal"></i></span>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li>  
-                        <a href="javascript:void(0);">This Week</a>
-                    </li>
-                    <li>  
-                        <a href="javascript:void(0);">Last Week</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="wg-table table-top-product-1">
-            <ul class="table-title flex gap10 mb-14">
-                <li>
-                    <div class="body-title">Product</div>
-                </li>    
-                <li>
-                    <div class="body-title">Review</div>
-                </li>
-                <li>
-                    <div class="body-title">Sold</div>
-                </li>
-                <li>
-                    <div class="body-title">Profit</div>
-                </li>
-            </ul>
-            <ul class="flex flex-column gap18">
-                <li class="product-item">
-                    <div class="image small no-bg">
-                        <img src="{{ asset('template_be/images/products/36.png') }}" alt="">
-                    </div>
-                    <div class="flex items-center justify-between flex-grow">
-                        <div class="name">
-                            <a href="product-list.html" class="body-text">Prodotti per il tuo cane...</a>
-                        </div>
-                        <div>
-                            <div class="rating-number">
-                                <div class="icon">
-                                    <i class="icon-star1"></i>
-                                </div>
-                                <div class="number body-text">4.7</div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="body-text">120</div>
-                        </div>
-                        <div>
-                            <div class="body-text">$16.960</div>
-                        </div>
-                    </div>
-                </li>
-                <li class="product-item">
-                    <div class="image small no-bg">
-                        <img src="{{ asset('template_be/images/products/37.png') }}" alt="">
-                    </div>
-                    <div class="flex items-center justify-between flex-grow">
-                        <div class="name">
-                            <a href="product-list.html" class="body-text">Wholesome Pride...</a>
-                        </div>
-                        <div>
-                            <div class="rating-number">
-                                <div class="icon">
-                                    <i class="icon-star1"></i>
-                                </div>
-                                <div class="number body-text">4.7</div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="body-text">120</div>
-                        </div>
-                        <div>
-                            <div class="body-text">$16.960</div>
-                        </div>
-                    </div>
-                </li>
-                <li class="product-item">
-                    <div class="image small no-bg">
-                        <img src="{{ asset('template_be/images/products/38.png') }}" alt="">
-                    </div>
-                    <div class="flex items-center justify-between flex-grow">
-                        <div class="name">
-                            <a href="product-list.html" class="body-text">Beneful Baked Delights...</a>
-                        </div>
-                        <div>
-                            <div class="rating-number">
-                                <div class="icon">
-                                    <i class="icon-star1"></i>
-                                </div>
-                                <div class="number body-text">4.7</div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="body-text">120</div>
-                        </div>
-                        <div>
-                            <div class="body-text">$16.960</div>
-                        </div>
-                    </div>
-                </li>
-                <li class="product-item">
-                    <div class="image small no-bg">
-                        <img src="{{ asset('template_be/images/products/39.png') }}" alt="">
-                    </div>
-                    <div class="flex items-center justify-between flex-grow">
-                        <div class="name">
-                            <a href="product-list.html" class="body-text">Taste of the Wild...</a>
-                        </div>
-                        <div>
-                            <div class="rating-number">
-                                <div class="icon">
-                                    <i class="icon-star1"></i>
-                                </div>
-                                <div class="number body-text">4.7</div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="body-text">120</div>
-                        </div>
-                        <div>
-                            <div class="body-text">$16.960</div>
-                        </div>
-                    </div>
-                </li>
-                <li class="product-item">
-                    <div class="image small no-bg">
-                        <img src="{{ asset('template_be/images/products/40.png') }}" alt="">
-                    </div>
-                    <div class="flex items-center justify-between flex-grow">
-                        <div class="name">
-                            <a href="product-list.html" class="body-text">Canagan - Britain's...</a>
-                        </div>
-                        <div>
-                            <div class="rating-number">
-                                <div class="icon">
-                                    <i class="icon-star1"></i>
-                                </div>
-                                <div class="number body-text">4.7</div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="body-text">120</div>
-                        </div>
-                        <div>
-                            <div class="body-text">$16.960</div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!-- top-product -->
-    <!-- earnings -->
-    <div class="wg-box">
-        <div class="flex items-center justify-between">
-            <h5>Earnings</h5>
-            <div class="dropdown default">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   <span class="icon-more"><i class="icon-more-horizontal"></i></span>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li>  
-                        <a href="javascript:void(0);">This Week</a>
-                    </li>
-                    <li>  
-                        <a href="javascript:void(0);">Last Week</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div id="line-chart-9"></div>
-        <div class="flex flex-wrap gap40 justify-center">
-            <div>
-                <div class="mb-2">
-                    <div class="block-legend">
-                        <div class="dot t1"></div>
-                        <div class="text-tiny">Revenue</div>
-                    </div>
-                </div>
-                <div class="flex items-center gap10">
-                    <h4>$37,802</h4>
-                    <div class="box-icon-trending up">
-                        <i class="icon-trending-up"></i>
-                        <div class="body-title number">0.56%</div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="mb-2">
-                    <div class="block-legend">
-                        <div class="dot t2"></div>
-                        <div class="text-tiny">Profit</div>
-                    </div>
-                </div>
-                <div class="flex items-center gap10">
-                    <h4>$28,305</h4>
-                    <div class="box-icon-trending up">
-                        <i class="icon-trending-up"></i>
-                        <div class="body-title number">0.56%</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- earnings -->
-    <!-- website-visitors -->
-    <div class="wg-box">
-        <div class="flex items-center justify-between">
-            <h5>Website visitors</h5>
-            <div class="dropdown default">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   <span class="icon-more"><i class="icon-more-horizontal"></i></span>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li>  
-                        <a href="javascript:void(0);">This Week</a>
-                    </li>
-                    <li>  
-                        <a href="javascript:void(0);">Last Week</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div id="line-chart-10"></div>
-    </div>
-    <!-- website-visitors -->
-</div>
+<!--End::Row--->
+
 @stop

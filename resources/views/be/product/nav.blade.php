@@ -1,20 +1,20 @@
-{{-- @dd(App\Helpers\Common::asideActive(config('routes.admin.category.list'))) --}}
-<li class="menu-item has-children {{ App\Helpers\Common::asideActive(config('routes.admin.product.list')) }}">
-    <a href="javascript:void(0);" class="menu-item-button">
-        <div class="icon"><i class="icon-shopping-cart"></i></div>
-        <div class="text">Sản phẩm</div>
+<li class="slide has-sub {{ App\Helpers\Common::asideActive(config('routes.admin.product.list')) }}">
+    <a href=" javascript:void(0);" class="side-menu__item {{ App\Helpers\Common::asideActive(config('routes.admin.product.list')) }}">
+    <i class="bx bx-gift side-menu__icon"></i>
+    <span class="side-menu__label">Sản phẩm</span>
+    <i class="fe fe-chevron-right side-menu__angle"></i>
     </a>
-    <ul class="sub-menu">
-        <li class="sub-menu-item">
+    <ul class="slide-menu child1">
+        <li class="slide">
             <a href="{{ route('admin.product.index') }}"
-                class="{{ App\Helpers\Common::asideActive(config('routes.admin.product.index')) }}">
-                <div class="text">Danh sách</div>
+                class="side-menu__item {{ App\Helpers\Common::asideActive(config('routes.admin.product.index')) }}">
+                Danh sách
             </a>
         </li>
-        <li class="sub-menu-item">
+        <li class="slide">
             <a href="{{ route('admin.product.create') }}"
-                class="{{ App\Helpers\Common::asideActive(config('routes.admin.product.create')) }}">
-                <div class="text">Thêm mới</div>
+                class="side-menu__item {{ App\Helpers\Common::asideActive(config('routes.admin.product.create')) }}">
+                Thêm mới
             </a>
         </li>
     </ul>

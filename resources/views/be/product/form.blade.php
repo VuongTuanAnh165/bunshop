@@ -29,6 +29,14 @@
                     <div class="error error-be">{{ $errors->first('category_id') }}</div>
                 @endif
             </fieldset>
+            <fieldset class="discount" style="max-width: 100px;">
+                <div class="body-title mb-10">Giảm giá (%) <span class="tf-color-1">*</span></div>
+                <input class="mb-10" type="text" placeholder="Nhập % giảm giá" name="discount" tabindex="0"
+                    value="{{ old('discount') ?? ($data->discount ?? 0) }}" aria-required="true" required>
+                @if ($errors->first('discount'))
+                    <div class="error error-be">{{ $errors->first('discount') }}</div>
+                @endif
+            </fieldset>
         </div>
         <fieldset class="content">
             <div class="body-title mb-10">Mô tả</div>

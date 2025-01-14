@@ -1,448 +1,481 @@
-<div class="header-dashboard">
-    <div class="wrap">
-        <div class="header-left">
-            <a href="{{ route('admin.home.index') }}">
-                <img class="" id="logo_header_mobile" alt="" src="{{ asset('template_be/images/logo/logo.png') }}"
-                    data-light="{{ asset('template_be/images/logo/logo.png') }}" data-dark="{{ asset('template_be/images/logo/logo-dark.png') }}" data-width="154px"
-                    data-height="52px" data-retina="{{ asset('template_be/images/logo/logo@2x.png') }}">
-            </a>
-            <div class="button-show-hide">
-                <i class="icon-menu-left"></i>
+<header class="app-header">
+
+    <!-- Start::main-header-container -->
+    <div class="main-header-container container-fluid">
+
+        <!-- Start::header-content-left -->
+        <div class="header-content-left">
+
+            <!-- Start::header-element -->
+            <div class="header-element">
+                <div class="horizontal-logo">
+                    <a href="index.html" class="header-logo">
+                        <img src="{{ asset('template_be/assets/images/brand-logos/desktop-logo.png') }}" alt="logo"
+                            class="desktop-logo">
+                        <img src="{{ asset('template_be/assets/images/brand-logos/toggle-logo.png') }}" alt="logo"
+                            class="toggle-logo">
+                        <img src="{{ asset('template_be/assets/images/brand-logos/desktop-dark.png') }}" alt="logo"
+                            class="desktop-dark">
+                        <img src="{{ asset('template_be/assets/images/brand-logos/toggle-dark.png') }}" alt="logo"
+                            class="toggle-dark">
+                        <img src="{{ asset('template_be/assets/images/brand-logos/desktop-white.png') }}" alt="logo"
+                            class="desktop-white">
+                        <img src="{{ asset('template_be/assets/images/brand-logos/toggle-white.png') }}" alt="logo"
+                            class="toggle-white">
+                    </a>
+                </div>
             </div>
-            <form class="form-search flex-grow">
-                <fieldset class="name">
-                    <input type="text" placeholder="Search here..." class="show-search" name="name" tabindex="2"
-                        value="" aria-required="true" required="">
-                </fieldset>
-                <div class="button-submit">
-                    <button class="" type="submit"><i class="icon-search"></i></button>
+            <!-- End::header-element -->
+
+            <!-- Start::header-element -->
+            <div class="header-element">
+                <!-- Start::header-link -->
+                <a aria-label="Hide Sidebar"
+                    class="sidemenu-toggle header-link animated-arrow hor-toggle horizontal-navtoggle"
+                    data-bs-toggle="sidebar" href="javascript:void(0);"><span></span></a>
+                <!-- End::header-link -->
+
+                <!-- Start::header-search -->
+                <div class="header-link header-search-element d-none d-lg-block">
+                    <input type="text" class="form-control" id="typehead" placeholder="Search for results..."
+                        autocomplete="off">
+                    <button class="btn pe-1"><i class="fe fe-search" aria-hidden="true"></i></button>
                 </div>
-                <div class="box-content-search" id="box-content-search">
-                    <ul class="mb-24">
-                        <li class="mb-14">
-                            <div class="body-title">Top selling product</div>
-                        </li>
-                        <li class="mb-14">
-                            <div class="divider"></div>
-                        </li>
-                        <li>
-                            <ul>
-                                <li class="product-item gap14 mb-10">
-                                    <div class="image no-bg">
-                                        <img src="{{ asset('template_be/images/products/17.png') }}" alt="">
-                                    </div>
-                                    <div class="flex items-center justify-between gap20 flex-grow">
-                                        <div class="name">
-                                            <a href="product-list.html" class="body-text">Dog Food Rachael Ray
-                                                Nutrish®</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="mb-10">
-                                    <div class="divider"></div>
-                                </li>
-                                <li class="product-item gap14 mb-10">
-                                    <div class="image no-bg">
-                                        <img src="{{ asset('template_be/images/products/18.png') }}" alt="">
-                                    </div>
-                                    <div class="flex items-center justify-between gap20 flex-grow">
-                                        <div class="name">
-                                            <a href="product-list.html" class="body-text">Natural Dog Food Healthy Dog
-                                                Food</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="mb-10">
-                                    <div class="divider"></div>
-                                </li>
-                                <li class="product-item gap14">
-                                    <div class="image no-bg">
-                                        <img src="{{ asset('template_be/images/products/19.png') }}" alt="">
-                                    </div>
-                                    <div class="flex items-center justify-between gap20 flex-grow">
-                                        <div class="name">
-                                            <a href="product-list.html" class="body-text">Freshpet Healthy Dog Food and
-                                                Cat</a>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="">
-                        <li class="mb-14">
-                            <div class="body-title">Order product</div>
-                        </li>
-                        <li class="mb-14">
-                            <div class="divider"></div>
-                        </li>
-                        <li>
-                            <ul>
-                                <li class="product-item gap14 mb-10">
-                                    <div class="image no-bg">
-                                        <img src="{{ asset('template_be/images/products/20.png') }}" alt="">
-                                    </div>
-                                    <div class="flex items-center justify-between gap20 flex-grow">
-                                        <div class="name">
-                                            <a href="product-list.html" class="body-text">Sojos Crunchy Natural Grain
-                                                Free...</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="mb-10">
-                                    <div class="divider"></div>
-                                </li>
-                                <li class="product-item gap14 mb-10">
-                                    <div class="image no-bg">
-                                        <img src="{{ asset('template_be/images/products/21.png') }}" alt="">
-                                    </div>
-                                    <div class="flex items-center justify-between gap20 flex-grow">
-                                        <div class="name">
-                                            <a href="product-list.html" class="body-text">Kristin Watson</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="mb-10">
-                                    <div class="divider"></div>
-                                </li>
-                                <li class="product-item gap14 mb-10">
-                                    <div class="image no-bg">
-                                        <img src="{{ asset('template_be/images/products/22.png') }}" alt="">
-                                    </div>
-                                    <div class="flex items-center justify-between gap20 flex-grow">
-                                        <div class="name">
-                                            <a href="product-list.html" class="body-text">Mega Pumpkin Bone</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="mb-10">
-                                    <div class="divider"></div>
-                                </li>
-                                <li class="product-item gap14">
-                                    <div class="image no-bg">
-                                        <img src="{{ asset('template_be/images/products/23.png') }}" alt="">
-                                    </div>
-                                    <div class="flex items-center justify-between gap20 flex-grow">
-                                        <div class="name">
-                                            <a href="product-list.html" class="body-text">Mega Pumpkin Bone</a>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </form>
+                <!-- End::header-search -->
+            </div>
+            <!-- End::header-element -->
+
+
         </div>
-        <div class="header-grid">
-            <div class="header-item country">
-                <select class="image-select no-text">
-                    <option data-thumbnail="{{ asset('template_be/images/country/1.png') }}">ENG</option>
-                    <option data-thumbnail="{{ asset('template_be/images/country/9.png') }}">VIE</option>
-                </select>
+        <!-- End::header-content-left -->
+
+        <!-- Start::header-content-right -->
+        <div class="header-content-right">
+
+            <!-- Start::header-element -->
+            <div class="header-element header-search d-block d-lg-none">
+                <!-- Start::header-link -->
+                <a href="javascript:void(0);" class="header-link" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="ti ti-search header-link-icon"></i>
+                </a>
+                <!-- End::header-link -->
             </div>
-            <div class="header-item button-dark-light">
-                <i class="icon-moon"></i>
-            </div>
-            <div class="popup-wrap noti type-header">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="header-item">
-                            <span class="text-tiny">1</span>
-                            <i class="icon-bell"></i>
-                        </span>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end has-content" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                            <h6>Message</h6>
-                        </li>
-                        <li>
-                            <div class="noti-item w-full wg-user active">
-                                <div class="image">
-                                    <img src="{{ asset('template_be/images/avatar/user-11.png') }}" alt="">
-                                </div>
-                                <div class="flex-grow">
-                                    <div class="flex items-center justify-between">
-                                        <a href="#" class="body-title">Cameron Williamson</a>
-                                        <div class="time">10:13 PM</div>
-                                    </div>
-                                    <div class="text-tiny">Hello?</div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="noti-item w-full wg-user active">
-                                <div class="image">
-                                    <img src="{{ asset('template_be/images/avatar/user-12.png') }}" alt="">
-                                </div>
-                                <div class="flex-grow">
-                                    <div class="flex items-center justify-between">
-                                        <a href="#" class="body-title">Ralph Edwards</a>
-                                        <div class="time">10:13 PM</div>
-                                    </div>
-                                    <div class="text-tiny">Are you there? interested i this...</div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="noti-item w-full wg-user active">
-                                <div class="image">
-                                    <img src="{{ asset('template_be/images/avatar/user-13.png') }}" alt="">
-                                </div>
-                                <div class="flex-grow">
-                                    <div class="flex items-center justify-between">
-                                        <a href="#" class="body-title">Eleanor Pena</a>
-                                        <div class="time">10:13 PM</div>
-                                    </div>
-                                    <div class="text-tiny">Interested in this loads?</div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="noti-item w-full wg-user active">
-                                <div class="image">
-                                    <img src="{{ asset('template_be/images/avatar/user-11.png') }}" alt="">
-                                </div>
-                                <div class="flex-grow">
-                                    <div class="flex items-center justify-between">
-                                        <a href="#" class="body-title">Jane Cooper</a>
-                                        <div class="time">10:13 PM</div>
-                                    </div>
-                                    <div class="text-tiny">Okay...Do we have a deal?</div>
-                                </div>
-                            </div>
-                        </li>
-                        <li><a href="#" class="tf-button w-full">View all</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="popup-wrap message type-header">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="header-item">
-                            <span class="text-tiny">1</span>
-                            <i class="icon-message-square"></i>
-                        </span>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end has-content" aria-labelledby="dropdownMenuButton2">
-                        <li>
-                            <h6>Notifications</h6>
-                        </li>
-                        <li>
-                            <div class="message-item item-1">
-                                <div class="image">
-                                    <i class="icon-noti-1"></i>
-                                </div>
-                                <div>
-                                    <div class="body-title-2">Discount available</div>
-                                    <div class="text-tiny">Morbi sapien massa, ultricies at rhoncus at, ullamcorper nec
-                                        diam</div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="message-item item-2">
-                                <div class="image">
-                                    <i class="icon-noti-2"></i>
-                                </div>
-                                <div>
-                                    <div class="body-title-2">Account has been verified</div>
-                                    <div class="text-tiny">Mauris libero ex, iaculis vitae rhoncus et</div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="message-item item-3">
-                                <div class="image">
-                                    <i class="icon-noti-3"></i>
-                                </div>
-                                <div>
-                                    <div class="body-title-2">Order shipped successfully</div>
-                                    <div class="text-tiny">Integer aliquam eros nec sollicitudin sollicitudin</div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="message-item item-4">
-                                <div class="image">
-                                    <i class="icon-noti-4"></i>
-                                </div>
-                                <div>
-                                    <div class="body-title-2">Order pending: <span>ID 305830</span></div>
-                                    <div class="text-tiny">Ultricies at rhoncus at ullamcorper</div>
-                                </div>
-                            </div>
-                        </li>
-                        <li><a href="#" class="tf-button w-full">View all</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="header-item button-zoom-maximize">
-                <div class="">
-                    <i class="icon-maximize"></i>
-                </div>
-            </div>
-            <div class="popup-wrap apps type-header">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton4"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="header-item">
-                            <i class="icon-grid"></i>
-                        </span>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end has-content" aria-labelledby="dropdownMenuButton4">
-                        <li>
-                            <h6>Related apps</h6>
-                        </li>
-                        <li>
-                            <ul class="list-apps">
-                                <li class="item">
-                                    <div class="image">
-                                        <img src="{{ asset('template_be/images/apps/item-1.png') }}" alt="">
-                                    </div>
-                                    <a href="#">
-                                        <div class="text-tiny">Photoshop</div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <div class="image">
-                                        <img src="{{ asset('template_be/images/apps/item-2.png') }}" alt="">
-                                    </div>
-                                    <a href="#">
-                                        <div class="text-tiny">illustrator</div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <div class="image">
-                                        <img src="{{ asset('template_be/images/apps/item-3.png') }}" alt="">
-                                    </div>
-                                    <a href="#">
-                                        <div class="text-tiny">Sheets</div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <div class="image">
-                                        <img src="{{ asset('template_be/images/apps/item-4.png') }}" alt="">
-                                    </div>
-                                    <a href="#">
-                                        <div class="text-tiny">Gmail</div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <div class="image">
-                                        <img src="{{ asset('template_be/images/apps/item-5.png') }}" alt="">
-                                    </div>
-                                    <a href="#">
-                                        <div class="text-tiny">Messenger</div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <div class="image">
-                                        <img src="{{ asset('template_be/images/apps/item-6.png') }}" alt="">
-                                    </div>
-                                    <a href="#">
-                                        <div class="text-tiny">Youtube</div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <div class="image">
-                                        <img src="{{ asset('template_be/images/apps/item-7.png') }}" alt="">
-                                    </div>
-                                    <a href="#">
-                                        <div class="text-tiny">Flaticon</div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <div class="image">
-                                        <img src="{{ asset('template_be/images/apps/item-8.png') }}" alt="">
-                                    </div>
-                                    <a href="#">
-                                        <div class="text-tiny">Instagram</div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <div class="image">
-                                        <img src="{{ asset('template_be/images/apps/item-9.png') }}" alt="">
-                                    </div>
-                                    <a href="#">
-                                        <div class="text-tiny">PDF</div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="#" class="tf-button w-full">View all app</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="popup-wrap user type-header">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="header-user wg-user">
-                            <span class="image">
-                                <img src="{{ asset('template_be/images/avatar/user-1.png') }}" alt="">
+            <!-- End::header-element -->
+
+            <!-- Start::header-element -->
+            <div class="header-element country-selector">
+                <!-- Start::header-link|dropdown-toggle -->
+                <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-auto-close="outside"
+                    data-bs-toggle="dropdown">
+                    <img src="{{ asset('template_be/assets/images/flags/us_flag.jpg') }}" alt="img"
+                        class="rounded-circle">
+                </a>
+                <!-- End::header-link|dropdown-toggle -->
+                <ul class="main-header-dropdown dropdown-menu dropdown-menu-end" data-popper-placement="none">
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                            <span class="avatar avatar-xs lh-1 me-2">
+                                <img src="{{ asset('template_be/assets/images/flags/us_flag.jpg') }}" alt="img">
                             </span>
-                            <span class="flex flex-column">
-                                <span class="body-title mb-2">Kristin Watson</span>
-                                <span class="text-tiny">Admin</span>
+                            English
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                            <span class="avatar avatar-xs lh-1 me-2">
+                                <img src="{{ asset('template_be/assets/images/flags/spain_flag.jpg') }}" alt="img">
                             </span>
-                        </span>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end has-content" aria-labelledby="dropdownMenuButton3">
-                        <li>
-                            <a href="#" class="user-item">
-                                <div class="icon">
-                                    <i class="icon-user"></i>
+                            Spanish
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                            <span class="avatar avatar-xs lh-1 me-2">
+                                <img src="{{ asset('template_be/assets/images/flags/french_flag.jpg') }}" alt="img">
+                            </span>
+                            French
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                            <span class="avatar avatar-xs lh-1 me-2">
+                                <img src="{{ asset('template_be/assets/images/flags/germany_flag.jpg') }}" alt="img">
+                            </span>
+                            German
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                            <span class="avatar avatar-xs lh-1 me-2">
+                                <img src="{{ asset('template_be/assets/images/flags/italy_flag.jpg') }}" alt="img">
+                            </span>
+                            Italian
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                            <span class="avatar avatar-xs lh-1 me-2">
+                                <img src="{{ asset('template_be/assets/images/flags/russia_flag.jpg') }}" alt="img">
+                            </span>
+                            Russian
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End::header-element -->
+
+            <!-- Start::header-element -->
+            <div class="header-element header-theme-mode">
+                <!-- Start::header-link|layout-setting -->
+                <a href="javascript:void(0);" class="header-link layout-setting">
+                    <span class="light-layout">
+                        <!-- Start::header-link-icon -->
+                        <i class="ti ti-moon  header-link-icon"></i>
+                        <!-- End::header-link-icon -->
+                    </span>
+                    <span class="dark-layout">
+                        <!-- Start::header-link-icon -->
+                        <i class="ti ti-sun header-link-icon"></i>
+                        <!-- End::header-link-icon -->
+                    </span>
+                </a>
+                <!-- End::header-link|layout-setting -->
+            </div>
+            <!-- End::header-element -->
+
+            <!-- Start::header-element -->
+            <div class="header-element cart-dropdown">
+                <!-- Start::header-link|dropdown-toggle -->
+                <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-auto-close="outside"
+                    data-bs-toggle="dropdown">
+                    <i class="ti ti-basket header-link-icon"></i>
+                    <span class="badge bg-success rounded-pill header-icon-badge" id="cart-icon-badge">4</span>
+                </a>
+                <!-- End::header-link|dropdown-toggle -->
+                <!-- Start::main-header-dropdown -->
+                <div class="main-header-dropdown dropdown-menu dropdown-menu-end" data-popper-placement="none">
+                    <div class="p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <p class="mb-0 fs-17 fw-semibold">Cart Items</p>
+                            <span class="badge bg-success-transparent" id="cart-data">4 Items</span>
+                        </div>
+                    </div>
+                    <div>
+                        <hr class="dropdown-divider">
+                    </div>
+                    <ul class="list-unstyled mb-0" id="header-cart-items-scroll">
+                        <li class="dropdown-item">
+                            <div class="d-flex align-items-start cart-dropdown-item">
+                                <img src="{{ asset('template_be/assets/images/ecommerce/jpg/4.jpg') }}" alt="img"
+                                    class="avatar avatar-md br-5 me-3">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex align-items-start justify-content-between mb-0">
+                                        <div class="mb-0 fs-13">
+                                            <a href="cart.html" class="text-muted fw-normal">SomeThing Phone</a>
+                                        </div>
+                                        <div>
+                                            <a href="javascript:void(0);"
+                                                class="header-cart-remove float-end dropdown-item-close"><i
+                                                    class="ti ti-trash"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="header-product-item justify-content-between">
+                                        <span class="mb-1 fs-15">$1,299.00</span>
+                                        <span class="fs-12 text-muted">Quantity 2</span>
+                                    </div>
                                 </div>
-                                <div class="body-title-2">Account</div>
-                            </a>
+                            </div>
                         </li>
-                        <li>
-                            <a href="#" class="user-item">
-                                <div class="icon">
-                                    <i class="icon-mail"></i>
+                        <li class="dropdown-item">
+                            <div class="d-flex align-items-start cart-dropdown-item">
+                                <img src="{{ asset('template_be/assets/images/ecommerce/jpg/5.jpg') }}" alt="img"
+                                    class="avatar avatar-md br-5 me-3">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex align-items-start justify-content-between mb-0">
+                                        <div class="mb-0 fs-13">
+                                            <a href="cart.html" class="text-muted fw-normal">Camera Lence</a>
+                                        </div>
+                                        <div>
+                                            <a href="javascript:void(0);"
+                                                class="header-cart-remove float-end dropdown-item-close"><i
+                                                    class="ti ti-trash"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="header-product-item justify-content-between">
+                                        <span class="mb-1 fs-15">$2,439.00</span>
+                                        <span class="fs-12 text-muted">Quantity 1</span>
+                                    </div>
                                 </div>
-                                <div class="body-title-2">Inbox</div>
-                                <div class="number">27</div>
-                            </a>
+                            </div>
                         </li>
-                        <li>
-                            <a href="#" class="user-item">
-                                <div class="icon">
-                                    <i class="icon-file-text"></i>
+                        <li class="dropdown-item">
+                            <div class="d-flex align-items-start cart-dropdown-item">
+                                <img src="{{ asset('template_be/assets/images/ecommerce/jpg/3.jpg') }}" alt="img"
+                                    class="avatar avatar-md br-5 me-3">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex align-items-start justify-content-between mb-0">
+                                        <div class="mb-0 fs-13">
+                                            <a href="cart.html" class="text-muted fw-normal">Photo Frame</a>
+                                        </div>
+                                        <div>
+                                            <a href="javascript:void(0);"
+                                                class="header-cart-remove float-end dropdown-item-close"><i
+                                                    class="ti ti-trash"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="header-product-item justify-content-between">
+                                        <span class="mb-1 fs-15">$1,699.00</span>
+                                        <span class="fs-12 text-muted">Quantity 1</span>
+                                    </div>
                                 </div>
-                                <div class="body-title-2">Taskboard</div>
-                            </a>
+                            </div>
                         </li>
-                        <li>
-                            <a href="setting.html" class="user-item">
-                                <div class="icon">
-                                    <i class="icon-settings"></i>
+                        <li class="dropdown-item">
+                            <div class="d-flex align-items-start cart-dropdown-item">
+                                <img src="{{ asset('template_be/assets/images/ecommerce/jpg/2.jpg') }}" alt="img"
+                                    class="avatar avatar-md br-5 me-3">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex align-items-start justify-content-between mb-0">
+                                        <div class="mb-0 fs-13">
+                                            <a href="cart.html" class="text-muted fw-normal">White Headphones</a>
+                                        </div>
+                                        <div>
+                                            <a href="javascript:void(0);"
+                                                class="header-cart-remove float-end dropdown-item-close"><i
+                                                    class="ti ti-trash"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="header-product-item justify-content-between">
+                                        <span class="mb-1 fs-15">$3,299.00</span>
+                                        <span class="fs-12 text-muted">Quantity 3</span>
+                                    </div>
                                 </div>
-                                <div class="body-title-2">Setting</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="user-item">
-                                <div class="icon">
-                                    <i class="icon-headphones"></i>
-                                </div>
-                                <div class="body-title-2">Support</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="login.html" class="user-item">
-                                <div class="icon">
-                                    <i class="icon-log-out"></i>
-                                </div>
-                                <div class="body-title-2">Log out</div>
-                            </a>
+                            </div>
                         </li>
                     </ul>
+                    <div class="p-3 empty-header-item border-top">
+                        <div class="d-grid">
+                            <a href="checkout.html" class="btn btn-primary">Proceed to checkout</a>
+                        </div>
+                    </div>
+                    <div class="p-5 empty-item d-none">
+                        <div class="text-center">
+                            <span class="avatar avatar-xl avatar-rounded bg-warning-transparent">
+                                <i class="ri-shopping-cart-2-line fs-2"></i>
+                            </span>
+                            <h6 class="fw-bold mb-1 mt-3">Your Cart is Empty</h6>
+                            <span class="mb-3 fw-normal fs-13 d-block">Add some items to make me happy :)</span>
+                            <a href="products.html" class="btn btn-primary btn-wave btn-sm m-1" data-abc="true">continue
+                                shopping <i class="bi bi-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
                 </div>
+                <!-- End::main-header-dropdown -->
             </div>
+            <!-- End::header-element -->
+
+            <!-- Start::header-element -->
+            <div class="header-element notifications-dropdown">
+                <!-- Start::header-link|dropdown-toggle -->
+                <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside" id="messageDropdown" aria-expanded="false">
+                    <i class="ti ti-notification header-link-icon"></i>
+                    <span class="badge bg-secondary rounded-pill header-icon-badge pulse pulse-secondary"
+                        id="notification-icon-badge">5</span>
+                </a>
+                <!-- End::header-link|dropdown-toggle -->
+                <!-- Start::main-header-dropdown -->
+                <div class="main-header-dropdown dropdown-menu dropdown-menu-end" data-popper-placement="none">
+                    <div class="p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <p class="mb-0 fs-17 fw-semibold">Notifications</p>
+                            <span class="badge bg-secondary-transparent" id="notifiation-data">5 Unread</span>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <ul class="list-unstyled mb-0" id="header-notification-scroll">
+                        <li class="dropdown-item">
+                            <div class="d-flex align-items-start">
+                                <div class="pe-2">
+                                    <span class="avatar avatar-md bg-primary"><i
+                                            class="ti ti-folder fs-20 text-fixed-white"></i></span>
+                                </div>
+                                <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <p class="mb-0 fw-semibold"><a href="notifications.html">Your Order Has Been
+                                                Shipped</a></p>
+                                        <span class="text-muted fw-normal fs-12 header-notification-text">2 hours
+                                            ago</span>
+                                    </div>
+                                    <div>
+                                        <a href="javascript:void(0);"
+                                            class="min-w-fit-content text-muted me-1 dropdown-item-close1"><i
+                                                class="ti ti-x fs-16"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown-item">
+                            <div class="d-flex align-items-start">
+                                <div class="pe-2">
+                                    <span class="avatar avatar-md bg-success"><i
+                                            class="ti ti-truck-delivery fs-20 text-fixed-white"></i></span>
+                                </div>
+                                <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <p class="mb-0 fw-semibold"><a href="notifications.html">New Order Received</a>
+                                        </p>
+                                        <span class="text-muted fw-normal fs-12 header-notification-text">2 hours
+                                            ago</span>
+                                    </div>
+                                    <div>
+                                        <a href="javascript:void(0);"
+                                            class="min-w-fit-content text-muted me-1 dropdown-item-close1"><i
+                                                class="ti ti-x fs-16"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown-item">
+                            <div class="d-flex align-items-start">
+                                <div class="pe-2">
+                                    <span class="avatar avatar-md bg-danger"><i
+                                            class="ti ti-brand-dribbble fs-20 text-fixed-white"></i></span>
+                                </div>
+                                <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <p class="mb-0 fw-semibold"><a href="notifications.html">Project has been
+                                                approved</a></p>
+                                        <span class="text-muted fw-normal fs-12 header-notification-text">1 day
+                                            ago</span>
+                                    </div>
+                                    <div>
+                                        <a href="javascript:void(0);"
+                                            class="min-w-fit-content text-muted me-1 dropdown-item-close1"><i
+                                                class="ti ti-x fs-16"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown-item">
+                            <div class="d-flex align-items-start">
+                                <div class="pe-2">
+                                    <span class="avatar avatar-md bg-info"><i
+                                            class="ti ti-user-check fs-20 text-fixed-white"></i></span>
+                                </div>
+                                <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <p class="mb-0 fw-semibold"><a href="notifications.html">Account Has Been
+                                                Verified</a></p>
+                                        <span class="text-muted fw-normal fs-12 header-notification-text">5 hours
+                                            ago</span>
+                                    </div>
+                                    <div>
+                                        <a href="javascript:void(0);"
+                                            class="min-w-fit-content text-muted me-1 dropdown-item-close1"><i
+                                                class="ti ti-x fs-16"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown-item">
+                            <div class="d-flex align-items-start">
+                                <div class="pe-2">
+                                    <span class="avatar avatar-md bg-secondary"><i
+                                            class="ti ti-edit fs-20 text-fixed-white"></i></span>
+                                </div>
+                                <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <p class="mb-0 fw-semibold"><a href="notifications.html">Updates Available</a>
+                                        </p>
+                                        <span class="text-muted fw-normal fs-12 header-notification-text">10 hours
+                                            ago</span>
+                                    </div>
+                                    <div>
+                                        <a href="javascript:void(0);"
+                                            class="min-w-fit-content text-muted me-1 dropdown-item-close1"><i
+                                                class="ti ti-x fs-16"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="p-3 empty-header-item1 border-top">
+                        <div class="d-grid">
+                            <a href="notifications.html" class="btn btn-primary">View All</a>
+                        </div>
+                    </div>
+                    <div class="p-5 empty-item1 d-none">
+                        <div class="text-center">
+                            <span class="avatar avatar-xl avatar-rounded bg-secondary-transparent">
+                                <i class="ri-notification-off-line fs-2"></i>
+                            </span>
+                            <h6 class="fw-semibold mt-3">No New Notifications</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- End::main-header-dropdown -->
+            </div>
+            <!-- End::header-element -->
+
+            <!-- Start::header-element -->
+            <div class="header-element header-fullscreen">
+                <!-- Start::header-link -->
+                <a onclick="openFullscreen();" href="#" class="header-link">
+                    <i class="ti ti-maximize full-screen-open header-link-icon"></i>
+                    <i class="ti ti-arrows-maximize full-screen-close header-link-icon d-none"></i>
+                </a>
+                <!-- End::header-link -->
+            </div>
+            <!-- End::header-element -->
+
+            <!-- Start::header-element -->
+            <div class="header-element">
+                <!-- Start::header-link|dropdown-toggle -->
+                <a href="#" class="header-link dropdown-toggle" id="mainHeaderProfile" data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside" aria-expanded="false">
+                    <div class="d-flex align-items-center">
+                        <div class="me-sm-2 me-0">
+                            <img src="{{ asset('template_be/assets/images/faces/9.jpg') }}" alt="img" width="32"
+                                height="32" class="rounded-circle">
+                        </div>
+                    </div>
+                </a>
+                <!-- End::header-link|dropdown-toggle -->
+                <ul class="main-header-dropdown dropdown-menu pt-0 overflow-hidden header-profile-dropdown dropdown-menu-end"
+                    aria-labelledby="mainHeaderProfile">
+                    <li><a class="dropdown-item d-flex" href="profile.html"><i
+                                class="ti ti-user-circle fs-18 me-2 op-7"></i>Profile</a></li>
+                    <li><a class="dropdown-item d-flex" href="mail.html"><i
+                                class="ti ti-inbox fs-18 me-2 op-7"></i>Inbox <span
+                                class="badge bg-warning-transparent ms-auto">37</span></a></li>
+                    <li><a class="dropdown-item d-flex border-block-end" href="to-do-list.html"><i
+                                class="ti ti-clipboard-check fs-18 me-2 op-7"></i>Task Manager</a></li>
+                    <li><a class="dropdown-item d-flex" href="settings.html"><i
+                                class="ti ti-adjustments-horizontal fs-18 me-2 op-7"></i>Settings</a></li>
+                    <li><a class="dropdown-item d-flex" href="chat.html"><i
+                                class="ti ti-headset fs-18 me-2 op-7"></i>Support</a></li>
+                    <li><a class="dropdown-item d-flex" href="sign-up.html"><i
+                                class="ti ti-logout fs-18 me-2 op-7"></i>Log Out</a></li>
+                </ul>
+            </div>
+            <!-- End::header-element -->
+
+            <!-- Start::header-element -->
+            <div class="header-element">
+                <!-- Start::header-link|switcher-icon -->
+                <a href="#" class="header-link switcher-icon" data-bs-toggle="offcanvas"
+                    data-bs-target="#switcher-canvas">
+                    <i class="ti ti-settings header-link-icon"></i>
+                </a>
+                <!-- End::header-link|switcher-icon -->
+            </div>
+            <!-- End::header-element -->
+
         </div>
+        <!-- End::header-content-right -->
+
     </div>
-</div>
+    <!-- End::main-header-container -->
+
+</header>

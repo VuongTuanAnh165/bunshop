@@ -5,11 +5,9 @@ use App\Http\Controllers\Be\BeHomeController;
 use App\Http\Controllers\Be\BeProductController;
 use App\Http\Controllers\Be\BeUserController;
 use App\Http\Controllers\CommonController;
+use App\Http\Controllers\Fe\FeHomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 Route::delete('ajax/destroy', [CommonController::class, 'destroy'])->name('ajax.destroy');
 Route::prefix('admin')->group(function () {
     Route::get('/login', [BeUserController::class, 'login'])->name('admin.login');
@@ -33,3 +31,5 @@ Route::prefix('admin')->group(function () {
         });
     });
 });
+
+Route::get('/', [FeHomeController::class, 'index'])->name('home.index');

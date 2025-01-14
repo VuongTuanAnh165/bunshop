@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('slug')->nullable();
             $table->longText('content')->nullable();
             $table->longText('tags')->nullable();
+            $table->double('discount')->nullable();
             $table->integer('create_by')->nullable();
             $table->integer('update_by')->nullable();
             $table->timestamps();
